@@ -1,3 +1,3 @@
 #!/bin/bash
- touch "fiel1.sh"
+ touch "fiel3.sh"
  echo "file created"
