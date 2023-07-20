@@ -16,17 +16,16 @@ public class QuickSort {
     for (int i = 0; i < size; i++) {
       System.out.print(arr[i] + " ");
     }
-    long startTime = System.nanoTime();
+    long startTime = System.currentTimeMillis();
     quickSort(arr, 0, size - 1);
-    long stopTime = System.nanoTime();
-
+    long stopTime = System.currentTimeMillis();
     System.out.println();
     System.out.println("After Sorting:");
     for (int i = 0; i < size; i++) {
       System.out.print(arr[i] + " ");
     }
     System.out.println();
-    System.out.println("Time taken:"+(stopTime-startTime)+"ns");
+    System.out.println("Time taken:"+(stopTime-startTime)+"ms");
   }
 
   private static void quickSort(int[] arr, int start, int end) {
