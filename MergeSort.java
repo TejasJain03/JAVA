@@ -16,12 +16,16 @@ public class MergeSort {
         for(int i=0;i<size;i++){
             System.out.print(arr[i]+"\t");
         }
+        long start=System.nanoTime();
         mergeSort(arr);
+        long stop=System.nanoTime();
         System.out.println();
         System.out.println("After Sorting");
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+"\t");
         }
+        System.out.println();
+        System.out.println("Time Taken:"+(stop-start)+"ns");
     }
 
     private static void mergeSort(int[] arr){
