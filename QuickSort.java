@@ -12,18 +12,17 @@ public class QuickSort {
     for (int i = 0; i < size; i++) {
       arr[i] = r.nextInt(200);
     }
-    System.out.println("Before Sorting:");
-    for (int i = 0; i < size; i++) {
-      System.out.print(arr[i] + " ");
-    }
+    // System.out.println("Before Sorting:");
+    // for (int i = 0; i < size; i++) {
+    //   System.out.print(arr[i] + " ");
+    // }
     long startTime = System.currentTimeMillis();
     quickSort(arr, 0, size - 1);
     long stopTime = System.currentTimeMillis();
-    System.out.println();
-    System.out.println("After Sorting:");
-    for (int i = 0; i < size; i++) {
-      System.out.print(arr[i] + " ");
-    }
+    // System.out.println("After Sorting:");
+    // for (int i = 0; i < size; i++) {
+    //   System.out.print(arr[i] + " ");
+    // }
     System.out.println();
     System.out.println("Time taken:"+(stopTime-startTime)+"ms");
   }

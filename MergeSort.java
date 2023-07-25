@@ -12,20 +12,19 @@ public class MergeSort {
         for(int i=0;i<size;i++){
             arr[i]=r.nextInt(100);
         }
-        System.out.println("Before sorting");
-        for(int i=0;i<size;i++){
-            System.out.print(arr[i]+"\t");
-        }
-        long start=System.nanoTime();
+        // System.out.println("Before sorting");
+        // for(int i=0;i<size;i++){
+        //     System.out.print(arr[i]+"\t");
+        // }
+        long start=System.currentTimeMillis();
         mergeSort(arr);
-        long stop=System.nanoTime();
+        long stop=System.currentTimeMillis();
+        // System.out.println("After Sorting");
+        // for(int i=0;i<arr.length;i++){
+        //     System.out.print(arr[i]+"\t");
+        // }
         System.out.println();
-        System.out.println("After Sorting");
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+"\t");
-        }
-        System.out.println();
-        System.out.println("Time Taken:"+(stop-start)+"ns");
+        System.out.println("Time Taken:"+(stop-start)+"ms");
     }
 
     private static void mergeSort(int[] arr){
