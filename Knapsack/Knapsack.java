@@ -39,6 +39,10 @@ public class Knapsack {
     n = sc.nextInt();
     System.out.println("Enter the capacity of the bag:");
     m = sc.nextInt();
+    if(m<=0){
+      System.out.println("Invalid Capacity");
+      System.exit(0);
+    }
     double[] profit = new double[n];
     double[] weight = new double[n];
     double[] ratio = new double[n];
