@@ -22,12 +22,12 @@ public class Knapsack {
         m = sc.nextInt();
         System.out.println("Item\tWeight\tProfit");
         for (i = 0; i < n; i++) {
-            System.out.println(i + "\t" + w[i] + "\t" + p[i]);
+            System.out.println(i+1 + "\t" + w[i] + "\t" + p[i]);
         }
         k.result(m, n, w, p, v);
         System.out.println("The items in bag are:");
         for (i = 0; i <= n; i++) {
-            for (j = 0; j <= m; j++) { // Changed this loop limit to '<='
+            for (j = 0; j <= m; j++) { 
                 System.out.print(v[i][j] + "\t");
             }
             System.out.println();
@@ -48,10 +48,10 @@ public class Knapsack {
             for (j = 0; j <= m; j++) {
                 if (i == 0 || j == 0) {
                     v[i][j] = 0;
-                } else if (w[i - 1] > j) { // Changed w[i] to w[i-1]
+                } else if (w[i - 1] > j) { 
                     v[i][j] = v[i - 1][j];
                 } else {
-                    v[i][j] = max(v[i - 1][j], p[i - 1] + v[i - 1][j - w[i - 1]]); // Changed w[i] to w[i-1] and p[i] to p[i-1]
+                    v[i][j] = max(v[i - 1][j], p[i - 1] + v[i - 1][j - w[i - 1]]); 
                 }
             }
         }
@@ -62,17 +62,17 @@ public class Knapsack {
         int i = n, j = m, item = 0;
         while (i != 0 && j != 0) {
             if (v[i][j] != v[i - 1][j]) {
-                x[i - 1] = 1; // Changed x[i] to x[i-1]
-                j = j - w[i - 1]; // Changed w[i] to w[i-1]
+                x[i - 1] = 1; 
+                j = j - w[i - 1]; 
                 item = 1;
             }
             i--;
         }
-        System.out.println("Optimal Solution:" + v[n][m]); // Changed v[n] to v[n][m]
+        System.out.println("Optimal Solution:" + v[n][m]); 
         System.out.println("Selected Items are:");
         for (i = 0; i < n; i++) {
             if (x[i] == 1) {
-                System.out.print(i + "\t");
+                System.out.print(i+1 + "\t");
             }
             if (item == 0) {
                 System.out.println("No items were placed in Knapsack");
