@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Knapsack {
+
   private static void knapsack(int n, double w[], double p[], int m) {
     double x[] = new double[n];
     double profit = 0;
@@ -39,7 +40,7 @@ public class Knapsack {
     n = sc.nextInt();
     System.out.println("Enter the capacity of the bag:");
     m = sc.nextInt();
-    if(m<=0){
+    if (m <= 0) {
       System.out.println("Invalid Capacity");
       System.exit(0);
     }
@@ -63,9 +64,9 @@ public class Knapsack {
       for (k = i + 1; k < n; k++) {
         if (ratio[k] > ratio[j]) j = k;
       }
-      double t=ratio[i];
-      ratio[i]=ratio[j];
-      ratio[j]=t;
+      double t = ratio[i];
+      ratio[i] = ratio[j];
+      ratio[j] = t;
       double t1 = profit[i];
       profit[i] = profit[j];
       profit[j] = t1;
@@ -77,6 +78,5 @@ public class Knapsack {
     //   System.out.println(ratio[i]);
     // }
     knapsack(n, weight, profit, m);
-
   }
 }
